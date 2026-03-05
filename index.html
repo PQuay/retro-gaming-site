@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <header class="arcade-header">
-    <img src="neon-logo.png" alt="Perran Quay Holiday Park Neon Logo" class="logo">
-    <p class="subtitle">Retro Gaming Hub</p>
-</header>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Perran Quay Retro Games</title>
 
-<!-- Retro Pixel Font -->
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 <style>
@@ -24,28 +19,50 @@ body {
     text-align: center;
 }
 
-h1, h2 {
-    text-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff;
-}
+/* ===== ARCADE HEADER ===== */
 
-section {
+.arcade-header {
     padding: 40px 20px;
-}
-
-/* ===== HEADER ===== */
-
-header {
-    padding: 30px 20px;
     border-bottom: 3px solid #ff00ff;
 }
 
-header h1 {
-    font-size: 1.2rem;
+.logo {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    animation: neonPulse 3s infinite ease-in-out;
 }
 
-header p {
+/* Glow Animation */
+
+@keyframes neonPulse {
+    0% {
+        filter: drop-shadow(0 0 15px #ff00ff)
+                drop-shadow(0 0 25px #00ffff);
+        transform: scale(1);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 35px #ff00ff)
+                drop-shadow(0 0 60px #00ffff);
+        transform: scale(1.03);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 15px #ff00ff)
+                drop-shadow(0 0 25px #00ffff);
+        transform: scale(1);
+    }
+}
+
+.subtitle {
+    margin-top: 20px;
     font-size: 0.7rem;
-    color: #ff00ff;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
 }
 
 /* ===== NAVIGATION ===== */
@@ -130,11 +147,12 @@ footer {
     color: #ff00ff;
 }
 
-/* ===== MOBILE TWEAKS ===== */
+/* ===== MOBILE ===== */
 
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 0.9rem;
+
+    .logo {
+        max-width: 350px;
     }
 
     nav a {
@@ -152,9 +170,9 @@ footer {
 
 <body>
 
-<header>
-    <h1>🕹️ Perran Quay Retro Games</h1>
-    <p>Console Tutorial</p>
+<header class="arcade-header">
+    <img src="neon-logo.png" alt="Perran Quay Holiday Park Neon Logo" class="logo">
+    <p class="subtitle">Retro Gaming Hub</p>
 </header>
 
 <nav>
@@ -189,4 +207,3 @@ footer {
 
 </body>
 </html>
-
