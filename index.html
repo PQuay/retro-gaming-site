@@ -101,7 +101,7 @@ nav a:hover {
     margin: 20px auto;
 }
 
-.video-container iframe {
+.video-container video {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -182,13 +182,13 @@ footer {
 <section id="video">
     <h2>🎥 Gaming Tutorial</h2>
     <div class="video-container">
-        <iframe 
-            src="Video.mov"
-            title="Retro Gaming Tutorial"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-    </div>
+
+<video controls>
+<source src="Video.mov" type="video/quicktime">
+Your browser does not support the video tag.
+</video>
+
+</div>
 </section>
 
 <section id="games">
@@ -202,6 +202,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
